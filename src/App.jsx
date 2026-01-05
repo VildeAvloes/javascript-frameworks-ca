@@ -1,5 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 
+import Layout from "./components/layout/layout/Layout";
+
 import HomePage from "./pages/HomePage";
 import ProductPage from "./pages/ProductPage";
 import CheckoutPage from "./pages/CheckoutPage";
@@ -8,13 +10,15 @@ import ContactPage from "./pages/ContactPage";
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/product/:id" element={<ProductPage />} />
-      <Route path="/cart" element={<CheckoutPage />} />
-      <Route path="/checkout-success" element={<CheckoutSucessPage />} />
-      <Route path="/contact" element={<ContactPage />} />
-    </Routes>
+    <Layout>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/product/:id" element={<ProductPage />} />
+        <Route path="/cart" element={<CheckoutPage />} />
+        <Route path="/checkout-success" element={<CheckoutSucessPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+      </Routes>
+    </Layout>
   );
 }
 
