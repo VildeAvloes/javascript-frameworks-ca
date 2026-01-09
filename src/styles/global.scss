@@ -1,0 +1,27 @@
+@use "./variables.scss" as *;
+
+body {
+  font-family: $font-body;
+  color: $primary;
+  background: $light;
+  margin: 1em 0;
+}
+
+p {
+  color: $secondary;
+}
+
+/* Links */
+a {
+  color: $primary;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid $border;
+}

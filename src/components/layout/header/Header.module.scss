@@ -1,0 +1,117 @@
+@use "../../../styles/variables.scss" as *;
+
+.header {
+  border-bottom: 1px solid $border;
+}
+
+.wrapper {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.row-one {
+  display: grid;
+  grid-template-columns: 1fr minmax(12rem, 32rem) 1fr;
+  align-items: center;
+  gap: 1em;
+}
+
+.logo {
+  justify-self: start;
+  color: $primary;
+  font-size: 1.15em;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.logo:hover {
+  text-decoration: none;
+}
+
+.search-wrapper {
+  justify-self: center;
+  width: 100%;
+}
+
+.cart-wrapper {
+  justify-self: end;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.row-two {
+  display: flex;
+  justify-content: center;
+}
+
+.nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-link {
+  color: $primary;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+.burger {
+  display: none;
+  border: none;
+  justify-self: end;
+  background: $light;
+  color: $primary;
+  padding: 0.45em 0.6em;
+  cursor: pointer;
+
+  line-height: 1;
+}
+
+.burger .material-symbols-outlined {
+  font-size: 24px;
+}
+
+@media (max-width: 770px) {
+  .burger {
+    display: inline-block;
+    width: fit-content;
+  }
+
+  .row-one {
+    grid-template-columns: 1fr;
+  }
+
+  .logo,
+  .search-wrapper {
+    justify-self: stretch;
+  }
+
+  .burger {
+    justify-self: end;
+  }
+
+  .row-two {
+    display: none;
+  }
+
+  .open {
+    display: flex;
+    justify-content: center;
+  }
+
+  .nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+  }
+}

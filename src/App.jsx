@@ -1,12 +1,10 @@
 import { Routes, Route } from "react-router-dom";
-
-import Layout from "./components/layout/layout/Layout";
-
 import HomePage from "./pages/HomePage";
 import ProductPage from "./pages/ProductPage";
 import CheckoutPage from "./pages/CheckoutPage";
 import CheckoutSucessPage from "./pages/CheckoutSuccessPage";
 import ContactPage from "./pages/ContactPage";
+import Layout from "./components/layout/layout/Layout";
 
 function App() {
   return (

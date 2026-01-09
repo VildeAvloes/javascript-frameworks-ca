@@ -1,0 +1,35 @@
+@use "../../../styles/variables.scss" as *;
+
+.button {
+  position: relative;
+  border: none;
+  background: $light;
+  color: $primary;
+  padding: 0.45em 0.6em;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
+}
+
+.button .material-symbols-outlined {
+  font-size: 24px;
+}
+
+.count {
+  position: absolute;
+  top: -0.15em;
+  right: -0.15em;
+  min-width: 1.5em;
+  height: 1.5em;
+  padding: 0.15em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8em;
+  font-weight: 600;
+  color: $light;
+  background: $accent;
+
+  border-radius: 999px;
+}
