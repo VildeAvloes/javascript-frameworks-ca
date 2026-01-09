@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import styles from "./CartIcon.module.scss";
+import s from "./CartIcon.module.scss";
 
 export default function CartIcon({ count = 2 }) {
   const navigate = useNavigate();
@@ -7,7 +7,7 @@ export default function CartIcon({ count = 2 }) {
   return (
     <button
       type="button"
-      className={styles.button}
+      className={s.button}
       onClick={() => navigate("/cart")}
       aria-label="Cart"
     >
@@ -16,7 +16,7 @@ export default function CartIcon({ count = 2 }) {
       </span>
 
       {count > 0 && (
-        <span className={styles.count} aria-hidden="true">
+        <span className={s.count} aria-hidden="true">
           {count}
         </span>
       )}

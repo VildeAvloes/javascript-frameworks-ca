@@ -1,7 +1,8 @@
 @use "../../../styles/variables.scss" as *;
 
 .header {
-  border-bottom: 1px solid $border;
+  border-bottom: 2px solid $primary;
+  padding: 1em 0;
 }
 
 .wrapper {
@@ -73,8 +74,6 @@
   color: $primary;
   padding: 0.45em 0.6em;
   cursor: pointer;
-
-  line-height: 1;
 }
 
 .burger .material-symbols-outlined {
@@ -83,21 +82,37 @@
 
 @media (max-width: 770px) {
   .burger {
-    display: inline-block;
+    display: inline-flex;
+    justify-self: start;
     width: fit-content;
   }
 
   .row-one {
-    grid-template-columns: 1fr;
-  }
-
-  .logo,
-  .search-wrapper {
-    justify-self: stretch;
+    grid-template-columns: auto 1fr auto;
+    grid-template-areas:
+      "burger logo cart"
+      "search search search";
+    align-items: center;
   }
 
   .burger {
+    grid-area: burger;
+  }
+
+  .cart-wrapper {
+    grid-area: cart;
     justify-self: end;
+  }
+
+  .search-wrapper {
+    grid-area: search;
+    justify-self: stretch;
+    width: 100%;
+  }
+
+  .logo {
+    grid-area: logo;
+    justify-self: center;
   }
 
   .row-two {

@@ -1,17 +1,17 @@
-import styles from "./SearchBar.module.scss";
+import s from "./SearchBar.module.scss";
 
 export default function SearchBar() {
   return (
-    <div className={styles["search-wrapper"]}>
+    <div className={s["search-wrapper"]}>
       <span
-        className={`material-symbols-outlined ${styles["search-icon"]}`}
+        className={`material-symbols-outlined ${s["search-icon"]}`}
         aria-hidden="true"
       >
         search
       </span>
 
       <input
-        className={styles["search-input"]}
+        className={s["search-input"]}
         type="search"
         placeholder="Search products"
         aria-label="Search products"

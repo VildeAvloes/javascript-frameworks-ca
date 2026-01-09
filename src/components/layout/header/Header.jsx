@@ -1,31 +1,19 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import SearchBar from "../../products/search-bar/SearchBar";
-import styles from "./Header.module.scss";
+import s from "./Header.module.scss";
 import CartIcon from "../cart-icon/CartIcon";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className={styles.header}>
-      <div className={styles.wrapper}>
-        <div className={styles["row-one"]}>
-          <Link to="/" className={styles.logo} onClick={() => setIsOpen(false)}>
-            Noroff Shop
-          </Link>
-
-          <div className={styles["search-wrapper"]}>
-            <SearchBar />
-          </div>
-
-          <div className={styles["cart-wrapper"]}>
-            <CartIcon />
-          </div>
-
+    <header className={s.header}>
+      <div className={s.wrapper}>
+        <div className={s["row-one"]}>
           <button
             type="button"
-            className={styles.burger}
+            className={s.burger}
             onClick={() => setIsOpen((v) => !v)}
             aria-label="Toggle menu"
             aria-expanded={isOpen}
@@ -34,19 +22,30 @@ export default function Header() {
               menu
             </span>
           </button>
+          <Link to="/" className={s.logo} onClick={() => setIsOpen(false)}>
+            Noroff Shop
+          </Link>
+
+          <div className={s["search-wrapper"]}>
+            <SearchBar />
+          </div>
+
+          <div className={s["cart-wrapper"]}>
+            <CartIcon />
+          </div>
         </div>
 
-        <div className={`${styles["row-two"]} ${isOpen ? styles.open : ""}`}>
-          <nav className={styles.nav}>
+        <div className={`${s["row-two"]} ${isOpen ? s.open : ""}`}>
+          <nav className={s.nav}>
             <Link
-              className={styles["nav-link"]}
+              className={s["nav-link"]}
               to="/"
               onClick={() => setIsOpen(false)}
             >
               Home
             </Link>
             <Link
-              className={styles["nav-link"]}
+              className={s["nav-link"]}
               to="/contact"
               onClick={() => setIsOpen(false)}
             >

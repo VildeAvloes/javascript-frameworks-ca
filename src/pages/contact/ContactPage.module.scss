@@ -1,0 +1,79 @@
+@use "../../styles/variables.scss" as *;
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title {
+  align-self: center;
+}
+
+.paragraph {
+  margin: 0 0 1.5em;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.field {
+  display: grid;
+  gap: 0.4em;
+}
+
+.label {
+  color: $primary;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  font-size: 0.9em;
+}
+
+.input,
+.textarea {
+  border: 1px solid $border;
+  border-radius: 5px;
+  background: $light;
+  color: $primary;
+  padding: 0.8em;
+  outline: none;
+}
+
+.textarea {
+  resize: vertical;
+}
+
+.input:focus,
+.textarea:focus {
+  border: 2px solid $accent;
+}
+
+.error {
+  margin: 0;
+  color: red;
+  font-size: 0.8em;
+}
+
+.button-wrapper {
+  align-self: center;
+}
+
+.button {
+  border: 1px solid $border;
+  border-radius: 25px;
+  background: $primary;
+  color: $light;
+  padding: 0.8em;
+  cursor: pointer;
+  width: fit-content;
+  min-width: 10em;
+}
+
+.button:hover {
+  border: 2px solid $primary;
+  background: $light;
+  color: $primary;
+}

@@ -1,8 +1,8 @@
 @use "../../../styles/variables.scss" as *;
 
 .footer {
-  border-top: 1px solid $border;
+  border-top: 2px solid $primary;
   color: $secondary;
   text-align: center;
-  padding: 1rem;
+  padding: 1em 0;
 }

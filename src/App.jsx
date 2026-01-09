@@ -3,7 +3,7 @@ import HomePage from "./pages/HomePage";
 import ProductPage from "./pages/ProductPage";
 import CheckoutPage from "./pages/CheckoutPage";
 import CheckoutSucessPage from "./pages/CheckoutSuccessPage";
-import ContactPage from "./pages/ContactPage";
+import ContactPage from "./pages/contact/ContactPage";
 import Layout from "./components/layout/layout/Layout";
 
 function App() {

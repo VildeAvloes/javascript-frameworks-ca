@@ -12,9 +12,7 @@
   top: 50%;
   transform: translateY(-50%);
   color: $secondary;
-  font-size: 22px;
-  line-height: 1;
-  pointer-events: none;
+  font-size: 24px;
 }
 
 .search-input {
@@ -27,11 +25,9 @@
   border-radius: 5px;
   background: $light;
   color: $primary;
-  padding: 0.6em 0.9em;
+  padding: 0.8em;
   padding-left: 3.5em;
   height: 2.5em;
-  line-height: 1.5em;
-  outline: none;
 }
 
 .search-input::placeholder {
