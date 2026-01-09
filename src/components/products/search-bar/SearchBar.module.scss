@@ -4,36 +4,35 @@
   justify-self: center;
   width: 100%;
   position: relative;
-}
 
-.search-icon {
-  position: absolute;
-  left: 0.7em;
-  top: 50%;
-  transform: translateY(-50%);
-  color: $secondary;
-  font-size: 24px;
-}
+  .search-icon {
+    position: absolute;
+    left: 0.7em;
+    top: 50%;
+    transform: translateY(-50%);
+    color: $secondary;
+  }
 
-.search-input {
-  padding-left: 2.3em;
-}
+  .search-input {
+    padding-left: 2.3em;
+  }
 
-.search-input {
-  width: 100%;
-  border: 1px solid $border;
-  border-radius: 5px;
-  background: $light;
-  color: $primary;
-  padding: 0.8em;
-  padding-left: 3.5em;
-  height: 2.5em;
-}
+  .search-input {
+    width: 100%;
+    border: 1px solid $border;
+    border-radius: 5px;
+    background: $light;
+    color: $primary;
+    padding: 0.8em;
+    padding-left: 3.5em;
+    height: 2.5em;
 
-.search-input::placeholder {
-  color: $secondary;
-}
+    &::placeholder {
+      color: $secondary;
+    }
 
-.search-input:focus {
-  border: 2px solid $accent;
+    &:focus {
+      border: 2px solid $accent;
+    }
+  }
 }

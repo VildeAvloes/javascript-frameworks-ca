@@ -127,8 +127,8 @@ export default function ContactPage() {
           />
           {errors.message && <p className={s.error}>{errors.message}</p>}
         </div>
-        <div className={s["button-wrapper"]}>
-          <button className={s.button} type="submit">
+        <div className={s["submit-wrapper"]}>
+          <button className={s.submit} type="submit">
             Submit
           </button>
         </div>
