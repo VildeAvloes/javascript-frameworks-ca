@@ -1,0 +1,35 @@
+import { useNavigate } from "react-router-dom";
+import s from "./ProductCard.module.scss";
+
+export default function ProductCard({ product }) {
+  const navigate = useNavigate();
+
+  const title = product?.title ?? "Untitled";
+  const image = product?.image?.url;
+  const imageAlt = product?.image?.alt ?? title;
+
+  function handleViewProduct() {
+    navigate(`/product/${product.id}`);
+  }
+
+  return (
+    <article className={s.card}>
+      <div className={s["image-wrapper"]}>
+        {image ? (
+          <img className={s.image} src={image} alt={imageAlt} />
+        ) : (
+          <div className={s["image-placeholder"]} aria-hidden="true" />
+        )}
+      </div>
+
+      <div className={s["text-wrapper"]}>
+        <h2 className={s.title}>{title}</h2>
+        <p className={s.price}>{product.discountedPrice}</p>
+
+        <button type="button" className={s.cta} onClick={handleViewProduct}>
+          View product
+        </button>
+      </div>
+    </article>
+  );
+}

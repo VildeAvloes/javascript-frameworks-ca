@@ -33,7 +33,7 @@
     .input,
     .textarea {
       border: 1px solid $border;
-      border-radius: 5px;
+      border-radius: 2px;
       background: $light;
       color: $primary;
       padding: 0.8em;
@@ -60,20 +60,19 @@
     }
 
     .submit {
-      border: 1px solid $border;
-      border-radius: 25px;
+      border: 2px solid $primary;
+      border-radius: 2px;
       background: $primary;
       color: $light;
       padding: 0.8em;
       cursor: pointer;
       width: fit-content;
       min-width: 10em;
-    }
 
-    .submit:hover {
-      border: 2px solid $primary;
-      background: $light;
-      color: $primary;
+      &:hover {
+        background: $light;
+        color: $primary;
+      }
     }
   }
 }
