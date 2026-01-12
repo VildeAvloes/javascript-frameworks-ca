@@ -128,7 +128,11 @@ export default function ContactPage() {
           {errors.message && <p className={s.error}>{errors.message}</p>}
         </div>
         <div className={s["submit-wrapper"]}>
-          <button className={s.submit} type="submit">
+          <button
+            className={s.submit}
+            type="submit"
+            onClick={() => console.log(formData)}
+          >
             Submit
           </button>
         </div>
