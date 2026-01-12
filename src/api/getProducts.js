@@ -10,3 +10,10 @@ export async function getProducts() {
   const json = await response.json();
   return json.data;
 }
+
+export async function getProductById(id) {
+  const response = await fetch(`${BASE_URL}/${id}`);
+
+  const json = await response.json();
+  return json.data;
+}

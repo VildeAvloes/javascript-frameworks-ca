@@ -1,8 +1,8 @@
 import { Routes, Route } from "react-router-dom";
 import HomePage from "./pages/home/HomePage";
-import ProductPage from "./pages/ProductPage";
-import CheckoutPage from "./pages/CheckoutPage";
-import CheckoutSucessPage from "./pages/CheckoutSuccessPage";
+import ProductPage from "./pages/product/ProductPage";
+import CheckoutPage from "./pages/checkout/CheckoutPage";
+import CheckoutSucessPage from "./pages/checkout/CheckoutSuccessPage";
 import ContactPage from "./pages/contact/ContactPage";
 import Layout from "./components/layout/layout/Layout";
 

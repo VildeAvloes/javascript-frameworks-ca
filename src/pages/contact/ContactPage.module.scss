@@ -1,6 +1,6 @@
 @use "../../styles/variables.scss" as *;
 
-.wrapper {
+.container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -27,7 +27,6 @@
       color: $primary;
       text-transform: uppercase;
       letter-spacing: 0.02em;
-      font-size: 0.9em;
     }
 
     .input,
@@ -51,28 +50,12 @@
 
     .error {
       margin: 0;
-      color: red;
+      color: $red;
       font-size: 0.8em;
     }
 
     .submit-wrapper {
       align-self: center;
-    }
-
-    .submit {
-      border: 2px solid $primary;
-      border-radius: 2px;
-      background: $primary;
-      color: $light;
-      padding: 0.8em;
-      cursor: pointer;
-      width: fit-content;
-      min-width: 10em;
-
-      &:hover {
-        background: $light;
-        color: $primary;
-      }
     }
   }
 }

@@ -10,6 +10,7 @@ export default function ProductCard({ product }) {
 
   function handleViewProduct() {
     navigate(`/product/${product.id}`);
+    console.log(product.id);
   }
 
   return (
@@ -24,9 +25,9 @@ export default function ProductCard({ product }) {
 
       <div className={s["text-wrapper"]}>
         <h2 className={s.title}>{title}</h2>
-        <p className={s.price}>{product.discountedPrice}</p>
+        <p className={s.price}>{product.discountedPrice} kr</p>
 
-        <button type="button" className={s.cta} onClick={handleViewProduct}>
+        <button type="button" className={"cta"} onClick={handleViewProduct}>
           View product
         </button>
       </div>

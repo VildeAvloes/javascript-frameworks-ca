@@ -4,9 +4,9 @@ import s from "./ContactPage.module.scss";
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     fullName: "",
-    subject: "",
     email: "",
-    body: "",
+    subject: "",
+    message: "",
   });
 
   const [errors, setErrors] = useState({});
@@ -27,16 +27,16 @@ export default function ContactPage() {
       newErrors.fullName = "Full name must be at least 3 characters";
     }
 
-    if (formData.subject.trim().length < 3) {
-      newErrors.subject = "Subject must be at least 3 characters";
-    }
-
     if (!/^\S+@\S+\.\S+$/.test(formData.email)) {
       newErrors.email = "Please enter a valid email address";
     }
 
-    if (formData.body.trim().length < 3) {
-      newErrors.body = "Message must be at least 3 characters";
+    if (formData.subject.trim().length < 3) {
+      newErrors.subject = "Subject must be at least 3 characters";
+    }
+
+    if (formData.message.trim().length < 3) {
+      newErrors.message = "Message must be at least 3 characters";
     }
 
     return newErrors;
@@ -53,15 +53,15 @@ export default function ContactPage() {
 
       setFormData({
         fullName: "",
-        subject: "",
         email: "",
-        body: "",
+        subject: "",
+        message: "",
       });
     }
   }
 
   return (
-    <div className={s.wrapper}>
+    <section className={s.container}>
       <h1 className={s.title}>Contact</h1>
       <p className={s.paragraph}>
         Send us a message and we’ll get back to you.
@@ -128,15 +128,11 @@ export default function ContactPage() {
           {errors.message && <p className={s.error}>{errors.message}</p>}
         </div>
         <div className={s["submit-wrapper"]}>
-          <button
-            className={s.submit}
-            type="submit"
-            onClick={() => console.log(formData)}
-          >
+          <button className={"cta"} type="submit">
             Submit
           </button>
         </div>
       </form>
-    </div>
+    </section>
   );
 }

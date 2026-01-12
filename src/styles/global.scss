@@ -32,3 +32,20 @@ button {
 .material-symbols-outlined {
   font-size: 24px;
 }
+
+.cta {
+  margin-top: 0.25em;
+  border: 2px solid $primary;
+  border-radius: 2px;
+  background: $primary;
+  color: $light;
+  padding: 0.5em 1em;
+  font-size: 0.9em;
+  min-width: 10em;
+  width: fit-content;
+
+  &:hover {
+    background: $light;
+    color: $primary;
+  }
+}

@@ -15,7 +15,7 @@ export default function HomePage() {
   }, []);
 
   return (
-    <div className={s.wrapper}>
+    <section className={s.container}>
       <h1>Products</h1>
       <ul className={s.grid}>
         {products.map((product) => (
@@ -24,6 +24,6 @@ export default function HomePage() {
           </li>
         ))}
       </ul>
-    </div>
+    </section>
   );
 }
