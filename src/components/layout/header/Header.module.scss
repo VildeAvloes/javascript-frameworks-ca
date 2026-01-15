@@ -8,118 +8,91 @@
     max-width: 72rem;
     margin: 0 auto;
     padding: 1em;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr minmax(12rem, 32rem) 1fr;
+    align-items: center;
     gap: 1em;
+  }
 
-    .row-one {
-      display: grid;
-      grid-template-columns: 1fr minmax(12rem, 32rem) 1fr;
-      align-items: center;
-      gap: 1em;
-    }
+  .logo {
+    justify-self: start;
+    color: $primary;
+    font-size: 1.15em;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
 
-    .logo {
-      justify-self: start;
-      color: $primary;
-      font-size: 1.15em;
-      font-weight: 600;
-      text-transform: uppercase;
+    &:hover {
       text-decoration: none;
-
-      &:hover {
-        text-decoration: none;
-      }
     }
+  }
 
-    .search-wrapper {
-      justify-self: center;
-      width: 100%;
+  .nav {
+    justify-self: center;
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .cart-wrapper {
+    justify-self: end;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5em;
+  }
+
+  .nav-link {
+    color: $primary;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
     }
+  }
 
-    .cart-wrapper {
-      justify-self: end;
-      display: inline-flex;
+  .burger {
+    display: none;
+    border: none;
+    background: $light;
+    color: $primary;
+    cursor: pointer;
+  }
+
+  @media (max-width: 770px) {
+    .wrapper {
+      grid-template-areas: "burger logo cart";
       align-items: center;
-      gap: 0.5em;
-    }
-
-    .row-two {
-      display: flex;
-      justify-content: center;
-    }
-
-    .nav {
-      display: flex;
-      gap: 1.5rem;
-    }
-
-    .nav-link {
-      color: $primary;
-      text-transform: uppercase;
-      text-decoration: none;
-
-      &:hover {
-        text-decoration: underline;
-      }
     }
 
     .burger {
-      display: none;
-      border: none;
-      justify-self: end;
-      background: $light;
-      color: $primary;
-      padding: 0.45em 0.6em;
-      cursor: pointer;
+      display: inline-flex;
+      grid-area: burger;
+      justify-self: start;
+      width: fit-content;
     }
 
-    @media (max-width: 770px) {
-      .row-one {
-        grid-template-columns: auto 1fr auto;
-        grid-template-areas:
-          "burger logo cart"
-          "search search search";
-        align-items: center;
-      }
+    .logo {
+      grid-area: logo;
+      justify-self: center;
+    }
 
-      .burger {
-        display: inline-flex;
-        justify-self: start;
-        width: fit-content;
-        grid-area: burger;
-      }
+    .cart-wrapper {
+      grid-area: cart;
+      justify-self: end;
+    }
 
-      .cart-wrapper {
-        grid-area: cart;
-        justify-self: end;
-      }
+    .nav {
+      display: none;
+    }
 
-      .search-wrapper {
-        grid-area: search;
-        justify-self: stretch;
-        width: 100%;
-      }
-
-      .logo {
-        grid-area: logo;
-        justify-self: center;
-      }
-
-      .row-two {
-        display: none;
-      }
-
-      .open {
-        display: flex;
-        justify-content: left;
-      }
-
-      .nav {
-        flex-direction: column;
-        align-items: left;
-        gap: 0.75rem;
-      }
+    .open {
+      display: flex;
+      justify-content: left;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-self: start;
+      gap: 0.5em;
+      padding: 0 0.6em;
     }
   }
 }

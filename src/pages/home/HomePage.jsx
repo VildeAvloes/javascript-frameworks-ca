@@ -17,6 +17,7 @@ export default function HomePage() {
   return (
     <section className={s.container}>
       <h1>Products</h1>
+
       <ul className={s.grid}>
         {products.map((product) => (
           <li key={product.id}>

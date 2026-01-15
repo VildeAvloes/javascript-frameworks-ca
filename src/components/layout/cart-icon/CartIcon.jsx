@@ -11,7 +11,7 @@ export default function CartIcon({ count = 2 }) {
       onClick={() => navigate("/cart")}
       aria-label="Cart"
     >
-      <span className="material-symbols-outlined" aria-hidden="true">
+      <span className={"material-symbols-outlined"} aria-hidden="true">
         shopping_bag
       </span>
 
