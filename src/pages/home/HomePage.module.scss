@@ -4,11 +4,18 @@
   max-width: 72rem;
   margin: 0 auto;
   padding: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .search-wrapper {
+    width: 100%;
+  }
 }
 
 .grid {
   list-style: none;
-  padding: 0;
+  padding: 1em 0;
   margin: 0;
   display: grid;
   gap: 1em;
