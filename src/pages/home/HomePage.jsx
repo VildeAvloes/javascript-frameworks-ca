@@ -19,7 +19,7 @@ export default function HomePage() {
     <section className={s.container}>
       <h1>Products</h1>
       <div className={s["search-wrapper"]}>
-        <SearchBar />
+        <SearchBar products={products} />
       </div>
 
       <ul className={s.grid}>
