@@ -2,10 +2,12 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getProductById } from "../../api/getProducts";
 import s from "./ProductPage.module.scss";
+import { useCart } from "../../context/cart-context";
 
 export default function ProductPage() {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
+  const { addToCart } = useCart();
 
   useEffect(() => {
     async function fetchProduct() {
@@ -65,7 +67,7 @@ export default function ProductPage() {
       <button
         type="button"
         className={"cta"}
-        onClick={() => console.log("add to cart")}
+        onClick={() => addToCart(product)}
       >
         Add to cart
       </button>

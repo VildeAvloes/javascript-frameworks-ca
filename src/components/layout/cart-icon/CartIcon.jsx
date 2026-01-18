@@ -1,8 +1,10 @@
 import { useNavigate } from "react-router-dom";
+import { useCart } from "../../../context/cart-context";
 import s from "./CartIcon.module.scss";
 
-export default function CartIcon({ count = 2 }) {
+export default function CartIcon() {
   const navigate = useNavigate();
+  const { count } = useCart();
 
   return (
     <button
@@ -11,7 +13,7 @@ export default function CartIcon({ count = 2 }) {
       onClick={() => navigate("/cart")}
       aria-label="Cart"
     >
-      <span className={"material-symbols-outlined"} aria-hidden="true">
+      <span className="material-symbols-outlined" aria-hidden="true">
         shopping_bag
       </span>
 

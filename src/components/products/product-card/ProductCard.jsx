@@ -10,7 +10,6 @@ export default function ProductCard({ product }) {
 
   function handleViewProduct() {
     navigate(`/product/${product.id}`);
-    console.log(product.id);
   }
 
   return (
