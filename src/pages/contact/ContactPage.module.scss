@@ -2,15 +2,14 @@
 
 .container {
   display: flex;
+  width: 100%;
   flex-direction: column;
-  justify-content: center;
-
-  .title {
-    align-self: center;
-  }
+  max-width: 700px;
+  padding: 1em;
 
   .paragraph {
     margin: 0 0 1.5em;
+    text-align: center;
   }
 
   .form {
@@ -39,10 +38,6 @@
       outline: none;
     }
 
-    .textarea {
-      resize: vertical;
-    }
-
     .input:focus,
     .textarea:focus {
       border: 2px solid $accent;
@@ -51,7 +46,6 @@
     .error {
       margin: 0;
       color: $red;
-      font-size: 0.8em;
     }
 
     .submit-wrapper {

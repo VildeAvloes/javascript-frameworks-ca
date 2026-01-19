@@ -12,8 +12,8 @@ export default function CartPage() {
 
       {cart.length === 0 ? (
         <>
-          <p>Your cart is empty.</p>
-          <Link className="cta" to="/">
+          <p className={s.paragraph}>Your cart is empty.</p>
+          <Link className={"link"} to="/">
             Back to store
           </Link>
         </>
@@ -27,7 +27,7 @@ export default function CartPage() {
                   <p className={s.price}>{item.discountedPrice} kr</p>
                 </div>
 
-                <Link className={s.link} to={`/product/${item.id}`}>
+                <Link className={"link"} to={`/product/${item.id}`}>
                   View
                 </Link>
               </li>
@@ -35,14 +35,15 @@ export default function CartPage() {
           </ul>
 
           <p className={s.total}>Total: {total} kr</p>
-
-          <button
-            type="button"
-            className="cta"
-            onClick={() => navigate("/checkout-success")}
-          >
-            Checkout
-          </button>
+          <div className={s["checkout-wrapper"]}>
+            <button
+              type="button"
+              className={"cta"}
+              onClick={() => navigate("/checkout-success")}
+            >
+              Checkout
+            </button>
+          </div>
         </>
       )}
     </section>

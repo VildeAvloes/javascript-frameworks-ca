@@ -13,6 +13,7 @@ p {
 
 h1 {
   text-transform: uppercase;
+  text-align: center;
 }
 
 a {
@@ -47,5 +48,10 @@ button {
   &:hover {
     background: $light;
     color: $primary;
+  }
+}
+.link {
+  &:hover {
+    font-weight: bold;
   }
 }

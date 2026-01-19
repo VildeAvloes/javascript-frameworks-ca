@@ -24,7 +24,7 @@ export default function ProductPage() {
   }
 
   const hasDiscount = product.price !== product.discountedPrice;
-  const savings = product.price - product.discountedPrice;
+  const savings = hasDiscount ? product.price - product.discountedPrice : 0;
 
   const reviews = Array.isArray(product.reviews) ? product.reviews : [];
   const hasReviews = reviews.length > 0;
@@ -32,13 +32,16 @@ export default function ProductPage() {
   return (
     <section className={s.container}>
       <h1 className={s.title}>{product.title}</h1>
+
       <div className={s["image-wrapper"]}>
-        {product.image?.url && (
+        {product.image?.url ? (
           <img
             className={s.image}
             src={product.image.url}
             alt={product.image.alt || product.title}
           />
+        ) : (
+          <div className={s["image-placeholder"]} aria-hidden="true" />
         )}
       </div>
 
@@ -53,14 +56,14 @@ export default function ProductPage() {
               </p>
 
               <p className={s["original-price"]}>
-                Original price: {product.price}kr
+                Original price: {product.price} kr
               </p>
 
-              <p className={s.savings}>Save {savings}kr</p>
+              <p className={s.savings}>Save {savings} kr</p>
             </div>
           </>
         ) : (
-          <p className={s.price}>{product.price}kr</p>
+          <p className={s.price}>{product.price} kr</p>
         )}
       </div>
 

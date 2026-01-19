@@ -2,61 +2,69 @@ import { useState } from "react";
 import s from "./ContactPage.module.scss";
 
 export default function ContactPage() {
-  const [formData, setFormData] = useState({
-    fullName: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
+  const [fullName, setFullName] = useState("");
+  const [subject, setSubject] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
   const [errors, setErrors] = useState({});
 
-  function handleChange(event) {
-    const { name, value } = event.target;
+  function onTextInputChange(event) {
+    const value = event.target.value;
 
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
+    if (event.target.name === "fullName") {
+      setFullName(value);
+    }
+
+    if (event.target.name === "subject") {
+      setSubject(value);
+    }
+
+    if (event.target.name === "email") {
+      setEmail(value);
+    }
+
+    if (event.target.name === "message") {
+      setMessage(value);
+    }
   }
 
   function validate() {
     const newErrors = {};
 
-    if (formData.fullName.trim().length < 3) {
+    if (fullName.trim().length < 3) {
       newErrors.fullName = "Full name must be at least 3 characters";
     }
 
-    if (!/^\S+@\S+\.\S+$/.test(formData.email)) {
-      newErrors.email = "Please enter a valid email address";
-    }
-
-    if (formData.subject.trim().length < 3) {
+    if (subject.trim().length < 3) {
       newErrors.subject = "Subject must be at least 3 characters";
     }
 
-    if (formData.message.trim().length < 3) {
+    if (!/^\S+@\S+\.\S+$/.test(email)) {
+      newErrors.email = "Please enter a valid email address";
+    }
+
+    if (message.trim().length < 3) {
       newErrors.message = "Message must be at least 3 characters";
     }
 
     return newErrors;
   }
 
-  function handleSubmit(event) {
+  function onFormSubmit(event) {
     event.preventDefault();
 
     const validationErrors = validate();
     setErrors(validationErrors);
 
     if (Object.keys(validationErrors).length === 0) {
-      console.log("Form data:", formData);
+      console.log("Form data:", { fullName, subject, email, message });
 
-      setFormData({
-        fullName: "",
-        email: "",
-        subject: "",
-        message: "",
-      });
+      setFullName("");
+      setSubject("");
+      setEmail("");
+      setMessage("");
+      setErrors({});
     }
   }
 
@@ -67,7 +75,7 @@ export default function ContactPage() {
         Send us a message and we’ll get back to you.
       </p>
 
-      <form className={s.form} onSubmit={handleSubmit} noValidate>
+      <form className={s.form} onSubmit={onFormSubmit} noValidate>
         <div className={s.field}>
           <label className={s.label} htmlFor="fullName">
             Full name
@@ -77,8 +85,8 @@ export default function ContactPage() {
             id="fullName"
             name="fullName"
             type="text"
-            value={formData.fullName}
-            onChange={handleChange}
+            value={fullName}
+            onChange={onTextInputChange}
           />
           {errors.fullName && <p className={s.error}>{errors.fullName}</p>}
         </div>
@@ -92,8 +100,8 @@ export default function ContactPage() {
             id="email"
             name="email"
             type="email"
-            value={formData.email}
-            onChange={handleChange}
+            value={email}
+            onChange={onTextInputChange}
           />
           {errors.email && <p className={s.error}>{errors.email}</p>}
         </div>
@@ -107,8 +115,8 @@ export default function ContactPage() {
             id="subject"
             name="subject"
             type="text"
-            value={formData.subject}
-            onChange={handleChange}
+            value={subject}
+            onChange={onTextInputChange}
           />
           {errors.subject && <p className={s.error}>{errors.subject}</p>}
         </div>
@@ -122,8 +130,8 @@ export default function ContactPage() {
             id="message"
             name="message"
             rows="6"
-            value={formData.message}
-            onChange={handleChange}
+            value={message}
+            onChange={onTextInputChange}
           />
           {errors.message && <p className={s.error}>{errors.message}</p>}
         </div>
