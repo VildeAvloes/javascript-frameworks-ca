@@ -23,24 +23,24 @@
     }
 
     .label {
-      color: $primary;
+      color: $dark;
       text-transform: uppercase;
       letter-spacing: 0.02em;
     }
 
     .input,
     .textarea {
-      border: 1px solid $border;
+      border: 1px solid $light-grey;
       border-radius: 2px;
       background: $light;
-      color: $primary;
+      color: $dark;
       padding: 0.8em;
       outline: none;
     }
 
     .input:focus,
     .textarea:focus {
-      border: 2px solid $accent;
+      border: 2px solid $purple;
     }
 
     .error {

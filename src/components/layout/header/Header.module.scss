@@ -1,7 +1,7 @@
 @use "../../../styles/variables.scss" as *;
 
 .header {
-  border-bottom: 2px solid $primary;
+  border-bottom: 2px solid $dark;
   padding: 1em 0 0 0;
 
   .wrapper {
@@ -16,7 +16,7 @@
 
   .logo {
     justify-self: start;
-    color: $primary;
+    color: $dark;
     font-size: 1.15em;
     font-weight: 600;
     text-transform: uppercase;
@@ -41,7 +41,7 @@
   }
 
   .nav-link {
-    color: $primary;
+    color: $dark;
     text-transform: uppercase;
     text-decoration: none;
 
@@ -54,7 +54,7 @@
     display: none;
     border: none;
     background: $light;
-    color: $primary;
+    color: $dark;
     cursor: pointer;
   }
 

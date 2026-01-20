@@ -2,13 +2,13 @@
 
 body {
   font-family: $font-body;
-  color: $primary;
+  color: $dark;
   background: $light;
   margin: 0;
 }
 
 p {
-  color: $primary;
+  color: $dark;
 }
 
 h1 {
@@ -17,7 +17,7 @@ h1 {
 }
 
 a {
-  color: $primary;
+  color: $dark;
   text-decoration: none;
 
   &:hover {
@@ -36,9 +36,9 @@ button {
 
 .cta {
   margin-top: 0.25em;
-  border: 2px solid $primary;
+  border: 2px solid $dark;
   border-radius: 2px;
-  background: $primary;
+  background: $dark;
   color: $light;
   padding: 0.5em 1em;
   font-size: 0.9em;
@@ -47,10 +47,12 @@ button {
 
   &:hover {
     background: $light;
-    color: $primary;
+    color: $dark;
   }
 }
 .link {
+  text-decoration: underline;
+
   &:hover {
     font-weight: bold;
   }

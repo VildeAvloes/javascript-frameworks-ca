@@ -20,6 +20,7 @@ export default function ProductPage() {
   }, [id]);
 
   if (!product) {
+    //make a loader
     return <p>Loading…</p>;
   }
 
@@ -41,7 +42,11 @@ export default function ProductPage() {
             alt={product.image.alt || product.title}
           />
         ) : (
-          <div className={s["image-placeholder"]} aria-hidden="true" />
+          <>
+            <div className={s["image-placeholder"]} aria-hidden="true">
+              No Image
+            </div>
+          </>
         )}
       </div>
 

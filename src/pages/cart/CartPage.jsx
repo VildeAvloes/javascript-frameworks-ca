@@ -12,10 +12,12 @@ export default function CartPage() {
 
       {cart.length === 0 ? (
         <>
-          <p className={s.paragraph}>Your cart is empty.</p>
-          <Link className={"link"} to="/">
-            Back to store
-          </Link>
+          <div className={s["empty-message"]}>
+            <p className={s.paragraph}>Your cart is empty.</p>
+            <Link className={"link"} to="/">
+              Back to store
+            </Link>
+          </div>
         </>
       ) : (
         <>

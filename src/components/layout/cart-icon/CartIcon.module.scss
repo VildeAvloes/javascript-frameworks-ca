@@ -4,7 +4,7 @@
   position: relative;
   border: none;
   background: $light;
-  color: $primary;
+  color: $dark;
   padding: 0.45em 0.6em;
   cursor: pointer;
   display: inline-flex;
@@ -24,7 +24,7 @@
     font-size: 0.8em;
     font-weight: 600;
     color: $light;
-    background: $accent;
+    background: $purple;
     border-radius: 999px;
   }
 }
