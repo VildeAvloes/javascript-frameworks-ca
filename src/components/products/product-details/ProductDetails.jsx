@@ -5,7 +5,9 @@ export default function ProductDetails({ product }) {
   const { addToCart } = useCart();
 
   const hasDiscount = product.price !== product.discountedPrice;
-  const savings = hasDiscount ? product.price - product.discountedPrice : 0;
+  const savings = hasDiscount
+    ? Math.round((product.price - product.discountedPrice) * 100) / 100
+    : 0;
 
   const reviews = Array.isArray(product.reviews) ? product.reviews : [];
   const hasReviews = reviews.length > 0;

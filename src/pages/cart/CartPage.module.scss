@@ -41,6 +41,21 @@
         margin: 0;
         color: $grey;
       }
+
+      .actions {
+        display: flex;
+        gap: 1em;
+        align-items: center;
+
+        .remove {
+          border: none;
+          background: $light;
+          color: $dark;
+          cursor: pointer;
+          display: inline-flex;
+          align-items: center;
+        }
+      }
     }
   }
 

@@ -4,8 +4,20 @@ import Form from "../../components/common/form/Form";
 import s from "./CartPage.module.scss";
 
 export default function CartPage() {
-  const { cart, total } = useCart();
+  const { cart, total, removeFromCart } = useCart();
   const navigate = useNavigate();
+
+  const groupedCart = cart.reduce((acc, item) => {
+    const existing = acc.find((product) => product.id === item.id);
+
+    if (existing) {
+      existing.quantity += 1;
+    } else {
+      acc.push({ ...item, quantity: 1 });
+    }
+
+    return acc;
+  }, []);
 
   const checkoutInitialValues = {
     fullName: "",
@@ -55,16 +67,32 @@ export default function CartPage() {
       ) : (
         <>
           <ul className={s.list}>
-            {cart.map((item, index) => (
+            {groupedCart.map((item, index) => (
               <li key={`${item.id}-${index}`} className={s.item}>
                 <div className={s.info}>
                   <p className={s.title}>{item.title}</p>
-                  <p className={s.price}>{item.discountedPrice} kr</p>
+                  <p className={s.price}>
+                    {item.discountedPrice} kr × {item.quantity}
+                  </p>
                 </div>
 
-                <Link className={"link"} to={`/product/${item.id}`}>
-                  View
-                </Link>
+                <div className={s.actions}>
+                  <Link className={"link"} to={`/product/${item.id}`}>
+                    View
+                  </Link>
+                  <button
+                    type="button"
+                    className={s.remove}
+                    onClick={() => removeFromCart(index)}
+                  >
+                    <span
+                      className="material-symbols-outlined"
+                      aria-hidden="true"
+                    >
+                      delete
+                    </span>
+                  </button>
+                </div>
               </li>
             ))}
           </ul>
@@ -140,7 +168,7 @@ export default function CartPage() {
                       CSV
                     </label>
                     <input
-                      className={`${s.input} ${s["input--small"]}`}
+                      className={`${s.input} ${s["input-small"]}`}
                       id="csv"
                       name="csv"
                       type="text"
