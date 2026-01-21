@@ -48,66 +48,74 @@ export default function ContactPage() {
         onValidSubmit={handleValidSubmit}
         submitText="Submit"
       >
-        {({ values, errors, onTextInputChange, s }) => (
+        {({ values, errors, onTextInputChange, formStyles }) => (
           <>
-            <div className={s.field}>
-              <label className={s.label} htmlFor="fullName">
+            <div className={formStyles.field}>
+              <label className={formStyles.label} htmlFor="fullName">
                 Full name
               </label>
               <input
-                className={s.input}
+                className={formStyles.input}
                 id="fullName"
                 name="fullName"
                 type="text"
                 value={values.fullName}
                 onChange={onTextInputChange}
               />
-              {errors.fullName && <p className={s.error}>{errors.fullName}</p>}
+              {errors.fullName && (
+                <p className={formStyles.error}>{errors.fullName}</p>
+              )}
             </div>
 
-            <div className={s.field}>
-              <label className={s.label} htmlFor="email">
+            <div className={formStyles.field}>
+              <label className={formStyles.label} htmlFor="email">
                 Email
               </label>
               <input
-                className={s.input}
+                className={formStyles.input}
                 id="email"
                 name="email"
                 type="email"
                 value={values.email}
                 onChange={onTextInputChange}
               />
-              {errors.email && <p className={s.error}>{errors.email}</p>}
+              {errors.email && (
+                <p className={formStyles.error}>{errors.email}</p>
+              )}
             </div>
 
-            <div className={s.field}>
-              <label className={s.label} htmlFor="subject">
+            <div className={formStyles.field}>
+              <label className={formStyles.label} htmlFor="subject">
                 Subject
               </label>
               <input
-                className={s.input}
+                className={formStyles.input}
                 id="subject"
                 name="subject"
                 type="text"
                 value={values.subject}
                 onChange={onTextInputChange}
               />
-              {errors.subject && <p className={s.error}>{errors.subject}</p>}
+              {errors.subject && (
+                <p className={formStyles.error}>{errors.subject}</p>
+              )}
             </div>
 
-            <div className={s.field}>
-              <label className={s.label} htmlFor="message">
+            <div className={formStyles.field}>
+              <label className={formStyles.label} htmlFor="message">
                 Message
               </label>
               <textarea
-                className={s.textarea}
+                className={formStyles.textarea}
                 id="message"
                 name="message"
                 rows="6"
                 value={values.message}
                 onChange={onTextInputChange}
               />
-              {errors.message && <p className={s.error}>{errors.message}</p>}
+              {errors.message && (
+                <p className={formStyles.error}>{errors.message}</p>
+              )}
             </div>
           </>
         )}

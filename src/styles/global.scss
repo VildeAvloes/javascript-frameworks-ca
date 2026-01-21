@@ -50,6 +50,11 @@ button {
     background: $light;
     color: $dark;
   }
+
+  &:focus {
+    background: $light;
+    color: $dark;
+  }
 }
 .link {
   text-decoration: underline;

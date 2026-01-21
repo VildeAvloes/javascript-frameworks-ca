@@ -3,12 +3,19 @@ import { useCart } from "../../context/cart-context";
 import Form from "../../components/common/form/Form";
 import s from "./CartPage.module.scss";
 
+const checkoutInitialValues = {
+  fullName: "",
+  cardDetails: "",
+  expDate: "",
+  csv: "",
+};
+
 export default function CartPage() {
   const { cart, total, removeFromCart } = useCart();
   const navigate = useNavigate();
 
   const groupedCart = cart.reduce((acc, item) => {
-    const existing = acc.find((product) => product.id === item.id);
+    const existing = acc.find((p) => p.id === item.id);
 
     if (existing) {
       existing.quantity += 1;
@@ -18,13 +25,6 @@ export default function CartPage() {
 
     return acc;
   }, []);
-
-  const checkoutInitialValues = {
-    fullName: "",
-    cardDetails: "",
-    expDate: "",
-    csv: "",
-  };
 
   function validateCheckout(values) {
     const errors = {};
@@ -107,14 +107,14 @@ export default function CartPage() {
             onValidSubmit={handleCheckoutSubmit}
             submitText="Checkout"
           >
-            {({ values, errors, onTextInputChange, s }) => (
+            {({ values, errors, onTextInputChange, formStyles }) => (
               <>
-                <div className={s.field}>
-                  <label className={s.label} htmlFor="fullName">
+                <div className={formStyles.field}>
+                  <label className={formStyles.label} htmlFor="fullName">
                     Full name
                   </label>
                   <input
-                    className={s.input}
+                    className={formStyles.input}
                     id="fullName"
                     name="fullName"
                     type="text"
@@ -122,16 +122,16 @@ export default function CartPage() {
                     onChange={onTextInputChange}
                   />
                   {errors.fullName && (
-                    <p className={s.error}>{errors.fullName}</p>
+                    <p className={formStyles.error}>{errors.fullName}</p>
                   )}
                 </div>
 
-                <div className={s.field}>
-                  <label className={s.label} htmlFor="cardDetails">
+                <div className={formStyles.field}>
+                  <label className={formStyles.label} htmlFor="cardDetails">
                     Card details
                   </label>
                   <input
-                    className={s.input}
+                    className={formStyles.input}
                     id="cardDetails"
                     name="cardDetails"
                     type="text"
@@ -140,17 +140,17 @@ export default function CartPage() {
                     placeholder="1234 5678 9012 3456"
                   />
                   {errors.cardDetails && (
-                    <p className={s.error}>{errors.cardDetails}</p>
+                    <p className={formStyles.error}>{errors.cardDetails}</p>
                   )}
                 </div>
 
-                <div className={s.row}>
-                  <div className={`${s.field} ${s.col}`}>
-                    <label className={s.label} htmlFor="expDate">
+                <div className={formStyles.row}>
+                  <div className={`${formStyles.field} ${formStyles.col}`}>
+                    <label className={formStyles.label} htmlFor="expDate">
                       Exp date
                     </label>
                     <input
-                      className={`${s.input} ${s["input--small"]}`}
+                      className={`${formStyles.input} ${formStyles["input-small"]}`}
                       id="expDate"
                       name="expDate"
                       type="text"
@@ -159,16 +159,16 @@ export default function CartPage() {
                       onChange={onTextInputChange}
                     />
                     {errors.expDate && (
-                      <p className={s.error}>{errors.expDate}</p>
+                      <p className={formStyles.error}>{errors.expDate}</p>
                     )}
                   </div>
 
-                  <div className={`${s.field} ${s.col}`}>
-                    <label className={s.label} htmlFor="csv">
+                  <div className={`${formStyles.field} ${formStyles.col}`}>
+                    <label className={formStyles.label} htmlFor="csv">
                       CSV
                     </label>
                     <input
-                      className={`${s.input} ${s["input-small"]}`}
+                      className={`${formStyles.input} ${s["input-small"]}`}
                       id="csv"
                       name="csv"
                       type="text"
@@ -177,7 +177,9 @@ export default function CartPage() {
                       onChange={onTextInputChange}
                       placeholder="123"
                     />
-                    {errors.csv && <p className={s.error}>{errors.csv}</p>}
+                    {errors.csv && (
+                      <p className={formStyles.error}>{errors.csv}</p>
+                    )}
                   </div>
                 </div>
               </>

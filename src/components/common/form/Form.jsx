@@ -31,7 +31,7 @@ export default function Form({
 
   return (
     <form className={s.form} onSubmit={onFormSubmit}>
-      {children({ values, errors, onTextInputChange, s: s })}
+      {children({ values, errors, onTextInputChange, formStyles: s })}
 
       <div className={s["button-wrapper"]}>
         <button className="cta" type="submit">
