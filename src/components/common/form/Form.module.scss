@@ -1,0 +1,57 @@
+@use "../../../styles/variables.scss" as *;
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+
+  .field {
+    display: grid;
+    gap: 0.4em;
+  }
+
+  .label {
+    color: $dark;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+  }
+
+  .input,
+  .textarea {
+    border: 1px solid $light-grey;
+    border-radius: 2px;
+    background: $light;
+    color: $dark;
+    padding: 0.8em;
+    outline: none;
+  }
+
+  .input:focus,
+  .textarea:focus {
+    border: 2px solid $purple;
+  }
+
+  .error {
+    margin: 0;
+    color: $red;
+  }
+
+  .button-wrapper {
+    align-self: center;
+  }
+
+  .row {
+    display: flex;
+    gap: 1em;
+    align-items: start;
+  }
+
+  .col {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .input--small {
+    max-width: 330px;
+  }
+}
