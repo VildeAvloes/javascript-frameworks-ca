@@ -21,6 +21,7 @@
     font-weight: 600;
     text-transform: uppercase;
     text-decoration: none;
+    letter-spacing: 0.25em;
 
     &:hover {
       text-decoration: none;
@@ -44,6 +45,7 @@
     color: $dark;
     text-transform: uppercase;
     text-decoration: none;
+    letter-spacing: 0.25em;
 
     &:hover {
       text-decoration: underline;

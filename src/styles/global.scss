@@ -11,10 +11,11 @@ p {
   color: $dark;
 }
 
-h1 {
+h1,
+h2 {
   text-transform: uppercase;
   text-align: center;
-  letter-spacing: 0.8;
+  letter-spacing: 0.25em;
 }
 
 a {
@@ -37,7 +38,6 @@ button {
 }
 
 .cta {
-  margin-top: 0.25em;
   border: 2px solid $dark;
   border-radius: 2px;
   background: $dark;
@@ -46,6 +46,7 @@ button {
   font-size: 0.9em;
   min-width: 10em;
   width: fit-content;
+  letter-spacing: 0.25em;
 
   &:hover {
     background: $light;

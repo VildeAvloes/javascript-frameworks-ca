@@ -23,7 +23,7 @@ export default function ProductCard({ product }) {
       </div>
 
       <div className={s["text-wrapper"]}>
-        <h2 className={s.title}>{title}</h2>
+        <p className={s.title}>{title}</p>
         <p className={s.price}>{product.discountedPrice} kr</p>
 
         <button type="button" className={"cta"} onClick={handleViewProduct}>
