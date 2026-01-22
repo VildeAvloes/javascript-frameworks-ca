@@ -11,6 +11,42 @@
   .search-wrapper {
     width: 100%;
   }
+
+  .intro {
+    width: 100%;
+    padding: 4rem 1rem 3rem;
+    border-bottom: 1px solid $light-grey;
+  }
+
+  .intro-content {
+    max-width: 42rem;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .intro-title {
+    margin: 0;
+  }
+
+  .intro-text {
+    margin: 1.25rem 0;
+    line-height: 1.6;
+    opacity: 0.85;
+  }
+
+  .hero-list {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    opacity: 0.75;
+  }
+
+  .products {
+    width: 100%;
+  }
 }
 
 .grid {

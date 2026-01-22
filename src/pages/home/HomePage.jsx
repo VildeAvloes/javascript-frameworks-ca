@@ -37,19 +37,30 @@ export default function HomePage() {
 
   return (
     <section className={s.container}>
-      <h1>Products</h1>
-      <div className={s["search-wrapper"]}>
-        <SearchBar products={products} />
-      </div>
-      <>
+      <section className={s.intro}>
+        <div className={s["intro-content"]}>
+          <h1 className={s["intro-title"]}>Designed for everyday use</h1>
+
+          <p className={s["intro-text"]}>
+            We focus on timeless pieces made for daily wear. Clean silhouettes,
+            neutral tones and thoughtful details — designed to last beyond the
+            season.
+          </p>
+        </div>
+      </section>
+
+      <section className={s.products}>
+        <h2>Browse Products</h2>
+        <div className={s["search-wrapper"]}>
+          <SearchBar products={products} />
+        </div>
+
         {loading ? (
-          <Loader text="Loading product..." />
+          <Loader text="Loading products..." />
         ) : notFound ? (
           <>
-            <h1 className={s.title}>Product not found</h1>
-            <p className={s.description}>
-              We couldn’t load the products. Please try again.
-            </p>
+            <h2>Products not found</h2>
+            <p>We couldn’t load the products. Please try again.</p>
           </>
         ) : (
           <ul className={s.grid}>
@@ -60,7 +71,7 @@ export default function HomePage() {
             ))}
           </ul>
         )}
-      </>
+      </section>
     </section>
   );
 }
