@@ -21,7 +21,7 @@ export default function Header() {
           </span>
         </button>
         <Link to="/" className={s.logo} onClick={() => setIsOpen(false)}>
-          Noroff Shop
+          Every
         </Link>
         <nav className={`${s.nav} ${isOpen ? s.open : " "}`}>
           <Link

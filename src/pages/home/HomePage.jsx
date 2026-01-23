@@ -39,12 +39,13 @@ export default function HomePage() {
     <section className={s.container}>
       <section className={s.intro}>
         <div className={s["intro-content"]}>
-          <h1 className={s["intro-title"]}>Designed for everyday use</h1>
+          <h1 className={s["intro-title"]}>
+            Everyday essentials, thoughtfully selected
+          </h1>
 
           <p className={s["intro-text"]}>
-            We focus on timeless pieces made for daily wear. Clean silhouettes,
-            neutral tones and thoughtful details — designed to last beyond the
-            season.
+            We bring together functional products across categories, focusing on
+            quality, simplicity and long-lasting design.
           </p>
         </div>
       </section>
