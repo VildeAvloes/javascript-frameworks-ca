@@ -48,7 +48,7 @@ export default function SearchBar({ products = [] }) {
                 <Link
                   to={`/product/${product.id}`}
                   className={s["suggestion-item"]}
-                  onClick={() => setQuery("")}
+                  onClick={handleSelect}
                 >
                   {product.title}
                 </Link>

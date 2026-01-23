@@ -13,7 +13,6 @@ export default function HomePage() {
   useEffect(() => {
     async function fetchProducts() {
       setLoading(true);
-      // await new Promise((resolve) => setTimeout(resolve, 5000));
 
       try {
         const item = await getProducts();
