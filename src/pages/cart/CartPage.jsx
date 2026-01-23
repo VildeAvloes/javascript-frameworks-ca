@@ -84,6 +84,7 @@ export default function CartPage() {
                     type="button"
                     className={s.remove}
                     onClick={() => removeFromCart(index)}
+                    aria-label={"Delete"}
                   >
                     <span
                       className="material-symbols-outlined"
