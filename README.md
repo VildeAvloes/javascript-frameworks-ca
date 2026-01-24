@@ -6,7 +6,16 @@
 
 ## :books: Description
 
-This is my delivery for **JavaScript Frameworks Course Assignment** at Noroff. The task was to apply the skills learned in the JacaScript Frameworks course and create an e-com website with the provided API.
+This is my delivery for **JavaScript Frameworks Course Assignment** at Noroff. The task was to apply the skills learned in the JavaScript Frameworks course and create an e-commerce website with the provided API.
+
+### :sparkles: Features
+
+- Product listing with lookahead search
+- Individual product pages with reviews and discounts
+- Shopping cart with total calculation
+- Checkout flow with success page
+- Contact form with validation
+- Client-side routing with React Router
 
 <br><br>
 
@@ -24,7 +33,7 @@ This project uses the [Noroff API V2](https://docs.noroff.dev/docs/v2/basic/onli
 
 ## :computer: Testing
 
-If you want to test site you can visit the live version. Please mind that for the contact form these requirements must be fulfilled
+If you want to test site, you can visit the live version. Please note that for the contact form these requirements must be fulfilled
 
 - Name must be 3 or more characters
 - E-mail must be a valid email address
@@ -50,7 +59,7 @@ Before you begin, make sure you have the following installed:
 ### Clone the Repository
 
 ```bash
-git clone add url here
+git clone git@github.com:VildeAvloes/javascript-frameworks-ca.git
 
 ```
 
@@ -70,13 +79,13 @@ npm install
 
 When installed you can use the following commands to run the application
 
-**Start:** Launches the page in web browser and watch for changes in the scss
+**Start:** Launches the application in web browser and watch for changes.
 
 ```
 npm run start
 ```
 
-**Build:** Compiles the SCSS to CSS
+**Build:** Builds the application for production
 
 ```
 npm run build
@@ -88,21 +97,15 @@ npm run build
 npm run format
 ```
 
-**Lint:** Lints files using ESLint
-
-```
-npm run lint
-```
-
 <br><br>
 
 ## :wrench: Technologies Used
 
 - React
-- Sass
+- Sass (CSS Modules)
+- React Router
 - Prettier
-- Eslint
-- Live Server
+- Google Material Symbols (icons)
 - Netlify
 
 <br><br>
