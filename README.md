@@ -1,70 +1,119 @@
-# Getting Started with Create React App
+## JavaScript Frameworks Course Assignment
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## _EVERY_
 
-## Available Scripts
+![A screenshot of the app](./public/assets/every-homepage-screenshot.png)
 
-In the project directory, you can run:
+## :books: Description
 
-### `npm start`
+This is my delivery for **JavaScript Frameworks Course Assignment** at Noroff. The task was to apply the skills learned in the JacaScript Frameworks course and create an e-com website with the provided API.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<br><br>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## :globe_with_meridians: API
 
-### `npm test`
+This project uses the [Noroff API V2](https://docs.noroff.dev/docs/v2/basic/online-shop) for the online-shop functionality.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<br><br>
 
-### `npm run build`
+## :rocket: Live Version
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+[EVERY](https://example.com)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<br><br>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## :computer: Testing
 
-### `npm run eject`
+If you want to test site you can visit the live version. Please mind that for the contact form these requirements must be fulfilled
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Name must be 3 or more characters
+- E-mail must be a valid email address
+- Subject must be 3 or more characters
+- Message must be 3 or more characters
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<br><br>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## :handshake: Contribution
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+If you'd like to contribute, feel free to fork the repo and follow the steps under _Getting Started_.
 
-## Learn More
+<br><br>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## :construction_worker: Getting Started
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Before you begin, make sure you have the following installed:
 
-### Code Splitting
+- [Node.js](https://nodejs.org/)
+- A terminal
+- Your preferred code editor
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Clone the Repository
 
-### Analyzing the Bundle Size
+```bash
+git clone add url here
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```
 
-### Making a Progressive Web App
+### Navigate to project folder
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```
+cd ...
+```
 
-### Advanced Configuration
+Install dependencies
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```
+npm install
+```
 
-### Deployment
+## Usage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+When installed you can use the following commands to run the application
 
-### `npm run build` fails to minify
+**Start:** Launches the page in web browser and watch for changes in the scss
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
+npm run start
+```
+
+**Build:** Compiles the SCSS to CSS
+
+```
+npm run build
+```
+
+**Format:** Formats files using Prettier
+
+```
+npm run format
+```
+
+**Lint:** Lints files using ESLint
+
+```
+npm run lint
+```
+
+<br><br>
+
+## :wrench: Technologies Used
+
+- React
+- Sass
+- Prettier
+- Eslint
+- Live Server
+- Netlify
+
+<br><br>
+
+## :page_facing_up: License
+
+This project is open for educational use as part of Noroff's JavaScript Frameworks Course Assignment. Please contact me before reusing the code for anything outside of that.
+
+<br><br>
+
+## :envelope: Contact
+
+- [My GitHub Profile](https://github.com/VildeAvloes)
+- [My LinkedIn Page](https://www.linkedin.com/in/vildeavloes/)

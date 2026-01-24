@@ -34,6 +34,10 @@ export default function HomePage() {
     fetchProducts();
   }, []);
 
+  useEffect(() => {
+    document.title = "EVERY | HOME";
+  }, []);
+
   return (
     <section className={s.container}>
       <section className={s.intro}>

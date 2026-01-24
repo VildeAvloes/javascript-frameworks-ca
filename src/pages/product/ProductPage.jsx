@@ -36,6 +36,22 @@ export default function ProductPage() {
     fetchProduct();
   }, [id]);
 
+  useEffect(() => {
+    if (loading) {
+      document.title = "EVERY | LOADING…";
+      return;
+    }
+
+    if (notFound) {
+      document.title = "EVERY | PRODUCT NOT FOUND";
+      return;
+    }
+
+    if (product) {
+      document.title = `EVERY | ${product.title.toUpperCase()}`;
+    }
+  }, [loading, notFound, product]);
+
   return (
     <section className={s.container}>
       {loading ? (

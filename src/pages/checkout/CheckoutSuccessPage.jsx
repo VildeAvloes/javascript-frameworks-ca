@@ -10,6 +10,10 @@ export default function CheckoutSuccessPage() {
     clearCart();
   }, [clearCart]);
 
+  useEffect(() => {
+    document.title = "EVERY | CHECKOUT";
+  }, []);
+
   return (
     <section className={s.container}>
       <h1>Order successful</h1>

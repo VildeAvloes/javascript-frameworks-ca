@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Form from "../../components/common/form/Form";
 import s from "./ContactPage.module.scss";
 
@@ -34,6 +35,10 @@ export default function ContactPage() {
   function handleValidSubmit(values) {
     console.log("Contact form data:", values);
   }
+
+  useEffect(() => {
+    document.title = "EVERY | CONTACT";
+  }, []);
 
   return (
     <section className={s.container}>

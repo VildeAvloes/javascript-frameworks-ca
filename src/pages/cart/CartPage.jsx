@@ -2,6 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useCart } from "../../context/cart-context";
 import Form from "../../components/common/form/Form";
 import s from "./CartPage.module.scss";
+import { useEffect } from "react";
 
 const checkoutInitialValues = {
   fullName: "",
@@ -52,6 +53,10 @@ export default function CartPage() {
     console.log("Checkout values:", values);
     navigate("/checkout-success");
   }
+
+  useEffect(() => {
+    document.title = "EVERY | CART";
+  }, []);
 
   return (
     <section className={s.container}>
