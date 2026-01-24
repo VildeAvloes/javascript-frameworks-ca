@@ -66,7 +66,7 @@ git clone git@github.com:VildeAvloes/javascript-frameworks-ca.git
 ### Navigate to project folder
 
 ```
-cd ...
+cd javascript-frameworks-ca
 ```
 
 Install dependencies

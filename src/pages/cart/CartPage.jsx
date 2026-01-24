@@ -27,30 +27,7 @@ export default function CartPage() {
     return acc;
   }, []);
 
-  function validateCheckout(values) {
-    const errors = {};
-
-    if (values.fullName.trim().length < 3) {
-      errors.fullName = "Full name must be at least 3 characters";
-    }
-
-    if (values.cardDetails.trim().length < 8) {
-      errors.cardDetails = "Card details must be at least 8 characters";
-    }
-
-    if (values.expDate.trim().length < 4) {
-      errors.expDate = "Exp date must be at least 4 characters";
-    }
-
-    if (values.csv.trim().length < 3) {
-      errors.csv = "CSV must be at least 3 characters";
-    }
-
-    return errors;
-  }
-
   function handleCheckoutSubmit(values) {
-    console.log("Checkout values:", values);
     navigate("/checkout-success");
   }
 
@@ -109,7 +86,7 @@ export default function CartPage() {
 
           <Form
             initialValues={checkoutInitialValues}
-            validate={validateCheckout}
+            validate={() => ({})}
             onValidSubmit={handleCheckoutSubmit}
             submitText="Checkout"
           >
@@ -127,9 +104,6 @@ export default function CartPage() {
                     value={values.fullName}
                     onChange={onTextInputChange}
                   />
-                  {errors.fullName && (
-                    <p className={formStyles.error}>{errors.fullName}</p>
-                  )}
                 </div>
 
                 <div className={formStyles.field}>
@@ -145,9 +119,6 @@ export default function CartPage() {
                     onChange={onTextInputChange}
                     placeholder="1234 5678 9012 3456"
                   />
-                  {errors.cardDetails && (
-                    <p className={formStyles.error}>{errors.cardDetails}</p>
-                  )}
                 </div>
 
                 <div className={formStyles.row}>
@@ -164,9 +135,6 @@ export default function CartPage() {
                       value={values.expDate}
                       onChange={onTextInputChange}
                     />
-                    {errors.expDate && (
-                      <p className={formStyles.error}>{errors.expDate}</p>
-                    )}
                   </div>
 
                   <div className={`${formStyles.field} ${formStyles.col}`}>
@@ -174,7 +142,7 @@ export default function CartPage() {
                       CSV
                     </label>
                     <input
-                      className={`${formStyles.input} ${s["input-small"]}`}
+                      className={`${formStyles.input} ${formStyles["input-small"]}`}
                       id="csv"
                       name="csv"
                       type="text"
@@ -183,9 +151,6 @@ export default function CartPage() {
                       onChange={onTextInputChange}
                       placeholder="123"
                     />
-                    {errors.csv && (
-                      <p className={formStyles.error}>{errors.csv}</p>
-                    )}
                   </div>
                 </div>
               </>

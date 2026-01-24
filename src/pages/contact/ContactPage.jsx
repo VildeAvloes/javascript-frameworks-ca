@@ -7,7 +7,7 @@ export default function ContactPage() {
     fullName: "",
     email: "",
     subject: "",
-    message: "",
+    body: "",
   };
 
   function validate(values) {
@@ -25,8 +25,8 @@ export default function ContactPage() {
       errors.subject = "Subject must be at least 3 characters";
     }
 
-    if (values.message.trim().length < 3) {
-      errors.message = "Message must be at least 3 characters";
+    if (values.body.trim().length < 3) {
+      errors.body = "Message must be at least 3 characters";
     }
 
     return errors;
@@ -107,20 +107,18 @@ export default function ContactPage() {
             </div>
 
             <div className={formStyles.field}>
-              <label className={formStyles.label} htmlFor="message">
+              <label className={formStyles.label} htmlFor="body">
                 Message
               </label>
               <textarea
                 className={formStyles.textarea}
-                id="message"
-                name="message"
+                id="body"
+                name="body"
                 rows="6"
-                value={values.message}
+                value={values.body}
                 onChange={onTextInputChange}
               />
-              {errors.message && (
-                <p className={formStyles.error}>{errors.message}</p>
-              )}
+              {errors.body && <p className={formStyles.error}>{errors.body}</p>}
             </div>
           </>
         )}
